@@ -31,6 +31,7 @@ function getCatIcon(key) {
     vidaai: '🌸',
     mix: '🔥',
     mix2: '✨',
+    shadi: '💃',
   };
   return <span className="cat-tab-icon">{icons[key] || '🎵'}</span>;
 }

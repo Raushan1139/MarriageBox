@@ -1,4 +1,9 @@
 export const PLAYLISTS = {
+  shadi: {
+    playlistId: 'PLeRZ5509ps2LHJO6sBJAPmwUgvBX-225S',
+    label: 'Shadi song',
+    theme: 'shadi',
+  },
   '90s': {
     playlistId: 'PLx-w3AV6zlXc9_Lb7XCu9pUqKwx5Ks-gT',
     label: '90s Songs',
