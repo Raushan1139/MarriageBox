@@ -1,0 +1,312 @@
+/* ============================================
+   PLAYER CSS — Fixed music player + queue
+   ============================================ */
+
+/* ---- MUSIC PLAYER (fixed bottom) ---- */
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 24px;
+  background: rgba(27, 16, 48, 0.72);
+  backdrop-filter: blur(20px) saturate(1.6);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6);
+  border-top: 1px solid rgba(247, 236, 217, 0.12);
+  box-shadow: 0 -4px 32px rgba(0, 0, 0, 0.5), 0 -1px 0 rgba(232, 135, 30, 0.2);
+  transition: background 0.6s;
+}
+
+.player::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: repeating-linear-gradient(115deg, var(--gold) 0 3px, transparent 3px 9px);
+  opacity: 0.8;
+}
+
+.player::after {
+  content: '';
+  position: absolute;
+  top: 3px; left: 0; right: 0;
+  height: 8px;
+  background-image:
+    radial-gradient(circle, var(--deep-rose) 2.5px, transparent 2.6px),
+    radial-gradient(circle, var(--gold) 1.6px, transparent 1.7px);
+  background-position: 0 0, 13px 0;
+  background-size: 26px 8px, 26px 8px;
+  border-top: 8px solid transparent;
+  opacity: 0.75;
+}
+
+.player > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Thumbnail */
+.thumb {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: conic-gradient(
+    from 0deg,
+    #1a0a1a 0deg 20deg,
+    #2a1020 20deg 40deg,
+    var(--gold) 40deg 44deg,
+    #1a0a1a 44deg 80deg,
+    #2a1020 80deg 100deg,
+    var(--marigold) 100deg 102deg,
+    #1a0a1a 102deg 140deg,
+    #2a1020 140deg 160deg,
+    var(--deep-rose) 160deg 162deg,
+    #1a0a1a 162deg 200deg,
+    var(--gold) 200deg 204deg,
+    #1a0a1a 204deg 240deg,
+    var(--marigold) 240deg 242deg,
+    #2a1020 242deg 280deg,
+    #1a0a1a 280deg 320deg,
+    var(--gold) 320deg 322deg,
+    #1a0a1a 322deg 360deg
+  );
+  box-shadow: 0 0 0 3px #f7ecd924, 0 0 16px rgba(232, 135, 30, 0.3);
+  transition: box-shadow 0.6s;
+}
+
+.thumb.spinning {
+  animation: vinylSpin 2.4s linear infinite;
+}
+
+.thumb::after {
+  content: '';
+  position: absolute;
+  inset: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #4a1a2e, var(--plum) 80%);
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.6);
+}
+
+.thumb span {
+  position: relative;
+  z-index: 1;
+  font-family: 'Yatra One', cursive;
+  font-size: 15px;
+  color: var(--cream);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+}
+
+/* Track info */
+.track-info {
+  position: relative;
+  z-index: 1;
+  min-width: 150px;
+}
+
+.track-info .name {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--cream);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px;
+}
+
+.track-info .film {
+  font-size: 11.5px;
+  color: var(--cream);
+  opacity: 0.6;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px;
+}
+
+/* ── Control buttons — instant hardware-accelerated press ── */
+.ctrl-btn {
+  /* GPU layer for zero-lag transform */
+  will-change: transform;
+  transform: translateZ(0);
+  transition: transform 80ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity  80ms linear,
+              filter   80ms linear;
+  touch-action: manipulation; /* remove 300ms touch delay */
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* Instant press — fires at pointer-down, before mouseup */
+.ctrl-btn:active {
+  transform: scale(0.82) translateZ(0);
+  opacity: 0.75;
+  filter: brightness(1.5);
+  transition-duration: 0ms; /* NO delay on press down */
+}
+
+/* Nav buttons */
+.player .navbtn {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--cream);
+  opacity: 0.85;
+}
+
+.player .navbtn:hover {
+  opacity: 1;
+  transform: scale(1.1) translateZ(0);
+}
+
+.player .navbtn svg {
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+/* Play button */
+.playbtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--playbtn-gradient, radial-gradient(circle at 35% 30%, var(--marigold), #7a1f2b 85%));
+  border: 3px double var(--playbtn-border, var(--gold));
+  color: var(--cream);
+  cursor: pointer;
+  animation: dholPulse 1.15s ease-in-out infinite;
+  transition: transform 80ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              background 0.6s, border-color 0.4s;
+}
+
+.playbtn svg {
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+/* Scrubber */
+.scrub {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.scrub .time {
+  font-size: 11px;
+  color: var(--cream);
+  opacity: 0.65;
+  min-width: 34px;
+  font-variant-numeric: tabular-nums;
+}
+
+.scrub .track,
+.scrub-track {
+  flex: 1;
+  position: relative;
+  height: 6px;
+  cursor: pointer;
+  background: repeating-linear-gradient(90deg, #f7ecd924 0 5px, #f7ecd938 5px 6px);
+  border-radius: 3px;
+}
+
+.scrub .fill,
+.scrub-fill {
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+  background: var(--scrub-fill, linear-gradient(90deg, var(--gold), var(--marigold)));
+  border-radius: 3px;
+  transition: background 0.6s;
+}
+
+.scrub .fill::after,
+.scrub-fill::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 2px solid var(--marigold);
+}
+
+/* Player divider */
+.player-divider {
+  flex-shrink: 0;
+  opacity: 0.55;
+}
+
+/* Volume */
+.vol {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--cream);
+}
+
+.vol-icon {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.vol .track,
+.vol-track {
+  width: 70px;
+  position: relative;
+  height: 6px;
+  cursor: pointer;
+  background: repeating-linear-gradient(90deg, #f7ecd924 0 5px, #f7ecd938 5px 6px);
+  border-radius: 3px;
+}
+
+.vol .fill,
+.vol-fill {
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+  background: linear-gradient(90deg, var(--magenta), var(--cream));
+  border-radius: 3px;
+  transition: width 0.1s;
+}
+
+.vol .fill::after,
+.vol-fill::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 2px solid var(--magenta);
+}
+
+/* Queue button */
+.queue-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

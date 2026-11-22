@@ -1,0 +1,161 @@
+/* ============================================
+   THEMES — per data-theme CSS variable overrides
+   ============================================ */
+
+body[data-theme='90s'] {
+  --scene-gradient: linear-gradient(180deg, #140a24 0%, #2e0f3d 20%, #6b1140 44%, #8c1f3b 64%, #a3491c 84%, #c2701e 100%);
+  --player-gradient: linear-gradient(180deg, #6b1140 0%, #8c1f3b 45%, #a3491c 100%);
+  --accent: #e8871e;
+  --accent2: #d4a017;
+  --tab-active-bg: linear-gradient(135deg, #e8871e, #b85a0e);
+  --tab-active-text: #241220;
+  --queue-active-bg: #e8871e26;
+  --playbtn-gradient: radial-gradient(circle at 35% 30%, #e8871e, #7a1f2b 85%);
+  --playbtn-border: #d4a017;
+  --scrub-fill: linear-gradient(90deg, #d4a017, #e8871e);
+  --glyph-bg: radial-gradient(circle at 35% 30%, #d4a017, #e8871e 70%);
+  --rangoli-color: #e8871e17;
+  --rangoli-mask: radial-gradient(circle, black 0%, black 40%, transparent 72%);
+  --hero-text-shadow: 0 2px 24px #00000059;
+}
+
+body[data-theme='90s'] .theme-overlay-90s { opacity: 1; }
+body[data-theme='90s'] .scanlines { opacity: 0.08; }
+
+body[data-theme='sangeet'] {
+  --scene-gradient: linear-gradient(180deg, #2a0a30 0%, #5c1048 18%, #ad1f5c 40%, #e8871e 62%, #ffd23f 82%, #f7ecd9 100%);
+  --player-gradient: linear-gradient(180deg, #ad1f5c 0%, #e8871e 50%, #d4a017 100%);
+  --accent: #ff6b9d;
+  --accent2: #ffd23f;
+  --tab-active-bg: linear-gradient(135deg, #ff6b9d, #ad1f5c);
+  --tab-active-text: #fff;
+  --queue-active-bg: #ff6b9d26;
+  --playbtn-gradient: radial-gradient(circle at 35% 30%, #ff6b9d, #ad1f5c 85%);
+  --playbtn-border: #ffd23f;
+  --scrub-fill: linear-gradient(90deg, #ffd23f, #ff6b9d);
+  --glyph-bg: radial-gradient(circle at 35% 30%, #ffd23f, #ff6b9d 70%);
+  --rangoli-color: #ff6b9d1a;
+  --rangoli-mask: radial-gradient(circle, black 0%, black 45%, transparent 75%);
+  --hero-text-shadow: 0 2px 24px #ff6b9d4d;
+}
+
+body[data-theme='sangeet'] .theme-overlay-sangeet { opacity: 1; }
+
+body[data-theme='dj'] {
+  --scene-gradient: linear-gradient(180deg, #0a0a2e 0%, #12125c 20%, #1e1e8c 42%, #2a1060 62%, #3a0f5a 80%, #1a0a30 100%);
+  --player-gradient: linear-gradient(180deg, #1e1e8c 0%, #2a1060 50%, #1a0a30 100%);
+  --accent: #00d4ff;
+  --accent2: #a855f7;
+  --tab-active-bg: linear-gradient(135deg, #00d4ff, #7c3aed);
+  --tab-active-text: #fff;
+  --queue-active-bg: #00d4ff1f;
+  --playbtn-gradient: radial-gradient(circle at 35% 30%, #00d4ff, #1e1e8c 85%);
+  --playbtn-border: #a855f7;
+  --scrub-fill: linear-gradient(90deg, #a855f7, #00d4ff);
+  --glyph-bg: radial-gradient(circle at 35% 30%, #a855f7, #00d4ff 70%);
+  --rangoli-color: #00d4ff0f;
+  --rangoli-mask: radial-gradient(circle, black 0%, black 35%, transparent 65%);
+  --hero-text-shadow: 0 2px 24px #00d4ff4d;
+}
+
+body[data-theme='dj'] .theme-overlay-dj { opacity: 1; }
+body[data-theme='dj'] .eq-bars { opacity: 0.35; }
+body[data-theme='dj'] .stage-char svg { filter: drop-shadow(0 0 3px #00d4ff33); }
+
+body[data-theme='vidaai'] {
+  --scene-gradient: linear-gradient(180deg, #1a0e28 0%, #3a1548 18%, #6b2060 38%, #8c3060 56%, #c27040 76%, #e89060 100%);
+  --player-gradient: linear-gradient(180deg, #6b2060 0%, #8c3060 45%, #c27040 100%);
+  --accent: #e8a0b0;
+  --accent2: #c890d0;
+  --tab-active-bg: linear-gradient(135deg, #e8a0b0, #c890d0);
+  --tab-active-text: #1a0e28;
+  --queue-active-bg: #e8a0b026;
+  --playbtn-gradient: radial-gradient(circle at 35% 30%, #e8a0b0, #6b2060 85%);
+  --playbtn-border: #c890d0;
+  --scrub-fill: linear-gradient(90deg, #c890d0, #e8a0b0);
+  --glyph-bg: radial-gradient(circle at 35% 30%, #c890d0, #e8a0b0 70%);
+  --rangoli-color: #e8a0b00f;
+  --rangoli-mask: radial-gradient(circle, black 0%, black 40%, transparent 70%);
+  --hero-text-shadow: 0 2px 24px #e8a0b040;
+}
+
+body[data-theme='vidaai'] .theme-overlay-vidaai { opacity: 1; }
+body[data-theme='vidaai'] .stage-char svg { filter: drop-shadow(0 0 2px #e8a0b026); }
+
+body[data-theme='mix'] {
+  --scene-gradient: linear-gradient(180deg, #060e1a 0%, #0a1f10 20%, #0d2e14 40%, #1a4020 60%, #0f2a18 80%, #061008 100%);
+  --player-gradient: linear-gradient(180deg, #0d2e14 0%, #1a5a20 45%, #0a3a10 100%);
+  --accent: #39ff14;
+  --accent2: #ffd700;
+  --tab-active-bg: linear-gradient(135deg, #39ff14, #00c850);
+  --tab-active-text: #060e1a;
+  --queue-active-bg: #39ff1426;
+  --playbtn-gradient: radial-gradient(circle at 35% 30%, #39ff14, #0a3a10 85%);
+  --playbtn-border: #ffd700;
+  --scrub-fill: linear-gradient(90deg, #ffd700, #39ff14);
+  --glyph-bg: radial-gradient(circle at 35% 30%, #ffd700, #39ff14 70%);
+  --rangoli-color: #39ff141a;
+  --rangoli-mask: radial-gradient(circle, black 0%, black 40%, transparent 72%);
+  --hero-text-shadow: 0 2px 24px #39ff1440;
+}
+
+body[data-theme='mix'] .theme-overlay-mix { opacity: 1; }
+body[data-theme='mix'] .stage-char svg { filter: drop-shadow(0 0 4px #39ff1433); }
+
+body[data-theme='mix2'] {
+  --scene-gradient: linear-gradient(180deg, #1a0a06 0%, #2e1a06 20%, #4a2a0a 40%, #6a3a10 60%, #8a5a1a 80%, #c4821e 100%);
+  --player-gradient: linear-gradient(180deg, #4a2a0a 0%, #8a5a1a 45%, #c4821e 100%);
+  --accent: #ff9f43;
+  --accent2: #ffd700;
+  --tab-active-bg: linear-gradient(135deg, #ff9f43, #e67e22);
+  --tab-active-text: #1a0a06;
+  --queue-active-bg: #ff9f4326;
+  --playbtn-gradient: radial-gradient(circle at 35% 30%, #ff9f43, #4a2a0a 85%);
+  --playbtn-border: #ffd700;
+  --scrub-fill: linear-gradient(90deg, #ffd700, #ff9f43);
+  --glyph-bg: radial-gradient(circle at 35% 30%, #ffd700, #ff9f43 70%);
+  --rangoli-color: #ff9f431a;
+  --rangoli-mask: radial-gradient(circle, black 0%, black 40%, transparent 72%);
+  --hero-text-shadow: 0 2px 24px #ff9f4340;
+}
+
+body[data-theme='mix2'] .theme-overlay-mix2 { opacity: 1; }
+body[data-theme='mix2'] .stage-char svg { filter: drop-shadow(0 0 4px #ff9f4333); }
+
+/* Baraat active state */
+body.baraat-active .bulb {
+  animation: glowBaraat 0.8s ease-in-out infinite !important;
+}
+
+body.baraat-active .stage-char svg {
+  filter: drop-shadow(0 0 6px #e8871e66) drop-shadow(0 0 12px #ff6b6b33);
+}
+
+body.baraat-active .scene::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(transparent 50%, #e8871e14 100%);
+  animation: vignettePulse 2s ease-in-out infinite;
+}
+
+/* Quiet mode */
+.quiet-mode .dancer .bob,
+.quiet-mode .dancer .arm-l,
+.quiet-mode .dancer .arm-r,
+.quiet-mode .dancer .leg-l,
+.quiet-mode .dancer .leg-r,
+.quiet-mode .petal-layer .petal,
+.quiet-mode .sprinkle,
+.quiet-mode .baraat-petal,
+.quiet-mode .baraat-confetti,
+.quiet-mode .confetti,
+.quiet-mode .vidaai-petal,
+.quiet-mode .playbtn,
+.quiet-mode .star,
+.quiet-mode .diya,
+.quiet-mode .baraat-btn.active {
+  animation: none !important;
+}

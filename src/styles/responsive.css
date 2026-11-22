@@ -1,0 +1,99 @@
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Nav */
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  
+  /* Player */
+  .player {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+  
+  .thumb {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .thumb span { font-size: 15px; }
+  
+  .track-info {
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .track-info .name {
+    font-size: 12px;
+    max-width: 130px;
+  }
+  
+  .track-info .film {
+    font-size: 10px;
+    max-width: 130px;
+  }
+  
+  .vol { display: none; }
+  .player-divider { display: none; }
+  
+  .scrub .time { min-width: 26px; font-size: 10px; }
+  
+  /* Tabs */
+  .tabs { gap: 6px; margin-top: -120px; }
+  .tab { padding: 7px 14px; font-size: 12px; }
+  
+  /* Hero */
+  .hero { padding: 10px 16px 32px; }
+  
+  /* Queue panel */
+  .queue-panel { bottom: 72px; }
+  
+  /* Baraat strip */
+  .baraat-strip { margin-top: 36px; }
+  
+  /* FAQ */
+  .faq-section { padding: 0 12px; }
+  
+  /* Energy meter */
+  .energy-meter { max-width: 220px; }
+  
+  /* Stage chars — hide some on very small screens */
+  .char-uncle, .char-photo { display: none; }
+}
+
+@media (max-width: 480px) {
+  .player { padding: 8px 10px; gap: 6px; }
+  .track-info .name { max-width: 100px; }
+  .track-info .film { max-width: 100px; }
+  
+  .tabs { margin-top: -100px; }
+  .tab { padding: 6px 12px; font-size: 11.5px; }
+  
+  .scrub { display: none; }
+  
+  .char-dhol { display: none; }
+  .char-chachi { display: none; }
+}
+
+@media (max-width: 360px) {
+  .track-info { display: none; }
+}
+
+/* Landscape mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .scene { padding-bottom: 90px; }
+  .hero { padding: 6px 16px 20px; }
+  h1 { font-size: clamp(24px, 5vw, 40px); }
+  .mandap { display: none; }
+  .stage-chars { display: none; }
+  .baraat-strip { margin-top: 10px; }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .track-info .name { max-width: 280px; }
+  .track-info .film { max-width: 280px; }
+}

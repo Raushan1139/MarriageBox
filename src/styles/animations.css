@@ -1,0 +1,341 @@
+/* ============================================
+   ANIMATIONS — All Keyframe Definitions
+   ============================================ */
+
+/* Stars */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+/* Hero heading gradient sweep */
+@keyframes heroGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Vinyl record spin on playing thumbnail */
+@keyframes vinylSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Queue now-playing waveform bars */
+@keyframes queueWave {
+  0%   { transform: scaleY(0.3); }
+  100% { transform: scaleY(1); }
+}
+
+/* Diya flame */
+@keyframes flicker {
+  0%, 100% { opacity: 0.6; r: 5; }
+  50% { opacity: 1; r: 6.5; }
+}
+.diya { animation: flicker 1.8s ease-in-out infinite; }
+
+/* String lights */
+@keyframes glow {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+.bulb { animation: glow 2.2s ease-in-out infinite; fill: var(--accent, #e8871e); }
+
+@keyframes glowBaraat {
+  0%, 100% { opacity: 0.85; fill: var(--marigold); }
+  33% { opacity: 1; fill: #ff6b6b; filter: brightness(1.4); }
+  66% { opacity: 0.9; fill: #ffd23f; filter: brightness(1.2); }
+}
+
+/* Petal fall */
+@keyframes petal-fall {
+  0% { opacity: 0.9; transform: translateY(0) translateX(0) rotate(0); }
+  100% { opacity: 0; transform: translateY(100vh) translateX(var(--drift, 30px)) rotate(var(--spin, 540deg)); }
+}
+
+/* Dancer animations */
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+@keyframes armSwingL {
+  0%, 100% { transform: rotate(-30deg); }
+  50% { transform: rotate(40deg); }
+}
+
+@keyframes armSwingR {
+  0%, 100% { transform: rotate(30deg); }
+  50% { transform: rotate(-40deg); }
+}
+
+@keyframes legKickL {
+  0%, 100% { transform: rotate(18deg); }
+  50% { transform: rotate(-14deg); }
+}
+
+@keyframes legKickR {
+  0%, 100% { transform: rotate(-18deg); }
+  50% { transform: rotate(14deg); }
+}
+
+/* Stage character animations */
+@keyframes charBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes charJump {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-8px) scale(1.02); }
+}
+
+@keyframes charSway {
+  0%, 100% { transform: translate(0) rotate(0); }
+  25% { transform: translate(-2px) rotate(-2deg); }
+  75% { transform: translate(2px) rotate(2deg); }
+}
+
+@keyframes charSpin {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  25% { transform: translateY(-6px) rotate(-8deg); }
+  50% { transform: translateY(-8px) rotate(0); }
+  75% { transform: translateY(-6px) rotate(8deg); }
+}
+
+@keyframes armSwingSlow {
+  0%, 100% { transform: rotate(-15deg); }
+  50% { transform: rotate(20deg); }
+}
+
+@keyframes armSwingFast {
+  0%, 100% { transform: rotate(-30deg); }
+  50% { transform: rotate(40deg); }
+}
+
+@keyframes armWaveSlow {
+  0%, 100% { transform: rotate(-10deg); }
+  50% { transform: rotate(30deg); }
+}
+
+@keyframes armWaveFast {
+  0%, 100% { transform: rotate(-25deg); }
+  50% { transform: rotate(50deg); }
+}
+
+@keyframes armPump {
+  0%, 100% { transform: rotate(-40deg) translateY(0); }
+  50% { transform: rotate(20deg) translateY(-4px); }
+}
+
+@keyframes legKickSlow {
+  0%, 100% { transform: rotate(10deg); }
+  50% { transform: rotate(-8deg); }
+}
+
+@keyframes legKickFast {
+  0%, 100% { transform: rotate(20deg); }
+  50% { transform: rotate(-18deg); }
+}
+
+@keyframes dholBeatSlow {
+  0%, 100% { transform: rotate(0) translateY(0); }
+  30% { transform: rotate(-12deg) translateY(2px); }
+  60% { transform: rotate(5deg) translateY(-1px); }
+}
+
+@keyframes dholBeatFast {
+  0%, 100% { transform: rotate(0) translateY(0); }
+  25% { transform: rotate(-20deg) translateY(3px); }
+  50% { transform: rotate(8deg) translateY(-2px); }
+  75% { transform: rotate(-10deg) translateY(1px); }
+}
+
+@keyframes clapSlow {
+  0%, 100% { transform: rotate(-5deg) translate(0); }
+  50% { transform: rotate(10deg) translate(4px); }
+}
+
+@keyframes clapFast {
+  0%, 100% { transform: rotate(-15deg) translate(0); }
+  40% { transform: rotate(15deg) translate(6px); }
+}
+
+@keyframes photoAim {
+  0%, 100% { transform: rotate(0) translateY(0); }
+  30% { transform: rotate(-5deg) translateY(-2px); }
+  60% { transform: rotate(3deg) translateY(1px); }
+}
+
+@keyframes photoSnap {
+  0%, 100% { transform: rotate(0) translateY(0); }
+  20% { transform: rotate(-8deg) translateY(-3px); }
+  40% { filter: brightness(1.3); transform: rotate(0) translateY(0); }
+  50% { transform: rotate(2deg) translateY(-1px); }
+}
+
+/* Baraat button pulse */
+@keyframes baraatPulse {
+  0%, 100% { box-shadow: 0 0 20px #ff6b6b59, 0 0 40px #e8871e26; }
+  50% { box-shadow: 0 0 28px #ff6b6b80, 0 0 56px #e8871e40; }
+}
+
+/* Shimmer on personalized names */
+@keyframes shimmer {
+  0% { background-position: -200%; }
+  100% { background-position: 200%; }
+}
+
+/* Vignette pulse */
+@keyframes vignettePulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Listener badge pulse */
+@keyframes listenerPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+/* Sparkle overlay */
+@keyframes sparkle {
+  0% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+/* DJ laser sweep */
+@keyframes laserSweep {
+  0% { transform: translate(-20px); }
+  100% { transform: translate(20px); }
+}
+
+/* EQ bounce */
+@keyframes eqBounce {
+  0% { transform: scaleY(0.3); }
+  100% { transform: scaleY(1); }
+}
+
+/* Dhol pulse on play button */
+@keyframes dholPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 #e8871e66; }
+  50% { transform: scale(1.06); box-shadow: 0 0 0 8px #e8871e00; }
+}
+
+/* Baraat active character speedup */
+body.baraat-active .char-baraati { animation-duration: 0.6s !important; }
+body.baraat-active .char-dancer { animation-duration: 0.5s !important; }
+body.baraat-active .char-dhol { animation-duration: 0.4s !important; }
+body.baraat-active .char-chachi { animation-duration: 0.55s !important; }
+body.baraat-active .char-uncle { animation-duration: 0.65s !important; }
+body.baraat-active .char-photo { animation-duration: 0.7s !important; }
+body.baraat-active .char-baraati .char-arm-l,
+body.baraat-active .char-baraati .char-arm-r { animation-duration: 0.5s !important; }
+body.baraat-active .char-dancer .char-arm-l,
+body.baraat-active .char-dancer .char-arm-r { animation-duration: 0.45s !important; }
+body.baraat-active .char-dhol .char-stick-l,
+body.baraat-active .char-dhol .char-stick-r { animation-duration: 0.35s !important; }
+body.baraat-active .char-chachi .char-arm-l,
+body.baraat-active .char-chachi .char-arm-r { animation-duration: 0.45s !important; }
+body.baraat-active .char-baraati .char-leg-l,
+body.baraat-active .char-baraati .char-leg-r { animation-duration: 0.5s !important; }
+body.baraat-active .char-dancer .char-leg-l,
+body.baraat-active .char-dancer .char-leg-r { animation-duration: 0.45s !important; }
+body.baraat-active .baraat-strip .dancer { animation-duration: 0.5s !important; }
+body.baraat-active .baraat-strip .dancer .arm-l,
+body.baraat-active .baraat-strip .dancer .arm-r,
+body.baraat-active .baraat-strip .dancer .leg-l,
+body.baraat-active .baraat-strip .dancer .leg-r { animation-duration: 0.4s !important; }
+body.baraat-active .baraat-strip .dhol-player .arm-l,
+body.baraat-active .baraat-strip .dhol-player .arm-r { animation-duration: 0.3s !important; }
+
+/* Stage character per-theme animations */
+/* 90s theme */
+body[data-theme='90s'] .char-baraati { animation: charBob 2s ease-in-out infinite; }
+body[data-theme='90s'] .char-baraati .char-arm-l { animation: armSwingSlow 2s ease-in-out infinite; }
+body[data-theme='90s'] .char-baraati .char-arm-r { animation: armSwingSlow 2s ease-in-out 0.3s infinite; }
+body[data-theme='90s'] .char-dancer { animation: charBob 2.4s ease-in-out 0.2s infinite; }
+body[data-theme='90s'] .char-dancer .char-arm-l { animation: armWaveSlow 2.4s ease-in-out infinite; }
+body[data-theme='90s'] .char-dancer .char-arm-r { animation: armWaveSlow 2.4s ease-in-out 0.4s infinite; }
+body[data-theme='90s'] .char-dancer .char-leg-l { animation: legKickSlow 2.4s ease-in-out infinite; }
+body[data-theme='90s'] .char-dhol { animation: charBob 1.8s ease-in-out 0.1s infinite; }
+body[data-theme='90s'] .char-dhol .char-stick-l { animation: dholBeatSlow 1.8s ease-in-out infinite; }
+body[data-theme='90s'] .char-dhol .char-stick-r { animation: dholBeatSlow 1.8s ease-in-out 0.3s infinite; }
+body[data-theme='90s'] .char-chachi { animation: charBob 2.2s ease-in-out 0.4s infinite; }
+body[data-theme='90s'] .char-chachi .char-arm-l { animation: clapSlow 2.2s ease-in-out infinite; }
+body[data-theme='90s'] .char-chachi .char-arm-r { animation: clapSlow 2.2s ease-in-out 0.1s infinite; }
+body[data-theme='90s'] .char-uncle { animation: charSway 3s ease-in-out infinite; }
+body[data-theme='90s'] .char-photo { animation: charBob 2.8s ease-in-out 0.5s infinite; }
+body[data-theme='90s'] .char-photo .char-arm-r { animation: photoAim 3s ease-in-out infinite; }
+
+/* Sangeet theme */
+body[data-theme='sangeet'] .char-baraati { animation: charJump 1s ease-in-out infinite; }
+body[data-theme='sangeet'] .char-baraati .char-arm-l { animation: armSwingFast 1s ease-in-out infinite; }
+body[data-theme='sangeet'] .char-baraati .char-arm-r { animation: armSwingFast 1s ease-in-out 0.2s infinite; }
+body[data-theme='sangeet'] .char-baraati .char-leg-l { animation: legKickFast 1s ease-in-out infinite; }
+body[data-theme='sangeet'] .char-baraati .char-leg-r { animation: legKickFast 1s ease-in-out 0.3s infinite; }
+body[data-theme='sangeet'] .char-dancer { animation: charSpin 1.2s ease-in-out infinite; }
+body[data-theme='sangeet'] .char-dancer .char-arm-l { animation: armWaveFast 1.2s ease-in-out infinite; }
+body[data-theme='sangeet'] .char-dancer .char-arm-r { animation: armWaveFast 1.2s ease-in-out 0.2s infinite; }
+body[data-theme='sangeet'] .char-dancer .char-leg-l { animation: legKickFast 1.2s ease-in-out 0.1s infinite; }
+body[data-theme='sangeet'] .char-dancer .char-leg-r { animation: legKickFast 1.2s ease-in-out 0.4s infinite; }
+body[data-theme='sangeet'] .char-dhol { animation: charBob 0.8s ease-in-out infinite; }
+body[data-theme='sangeet'] .char-dhol .char-stick-l { animation: dholBeatFast 0.8s ease-in-out infinite; }
+body[data-theme='sangeet'] .char-dhol .char-stick-r { animation: dholBeatFast 0.8s ease-in-out 0.2s infinite; }
+body[data-theme='sangeet'] .char-chachi { animation: charBob 1s ease-in-out 0.1s infinite; }
+body[data-theme='sangeet'] .char-chachi .char-arm-l { animation: clapFast 1s ease-in-out infinite; }
+body[data-theme='sangeet'] .char-chachi .char-arm-r { animation: clapFast 1s ease-in-out 0.1s infinite; }
+body[data-theme='sangeet'] .char-chachi .char-leg-l { animation: legKickFast 1s ease-in-out 0.2s infinite; }
+body[data-theme='sangeet'] .char-uncle { animation: charJump 1.4s ease-in-out 0.2s infinite; }
+body[data-theme='sangeet'] .char-uncle .char-arm-l { animation: armSwingFast 1.4s ease-in-out infinite; }
+body[data-theme='sangeet'] .char-uncle .char-arm-r { animation: armSwingFast 1.4s ease-in-out 0.3s infinite; }
+body[data-theme='sangeet'] .char-photo { animation: charBob 1.6s ease-in-out 0.3s infinite; }
+body[data-theme='sangeet'] .char-photo .char-arm-r { animation: photoSnap 1.6s ease-in-out infinite; }
+
+/* DJ theme */
+body[data-theme='dj'] .char-baraati { animation: charJump 0.7s ease-in-out infinite; }
+body[data-theme='dj'] .char-baraati .char-arm-l { animation: armPump 0.7s ease-in-out infinite; }
+body[data-theme='dj'] .char-baraati .char-arm-r { animation: armPump 0.7s ease-in-out 0.15s infinite; }
+body[data-theme='dj'] .char-baraati .char-leg-l { animation: legKickFast 0.7s ease-in-out infinite; }
+body[data-theme='dj'] .char-baraati .char-leg-r { animation: legKickFast 0.7s ease-in-out 0.2s infinite; }
+body[data-theme='dj'] .char-dancer { animation: charSpin 0.9s ease-in-out infinite; }
+body[data-theme='dj'] .char-dancer .char-arm-l { animation: armWaveFast 0.9s ease-in-out infinite; }
+body[data-theme='dj'] .char-dancer .char-arm-r { animation: armWaveFast 0.9s ease-in-out 0.15s infinite; }
+body[data-theme='dj'] .char-dancer .char-leg-l { animation: legKickFast 0.9s ease-in-out 0.1s infinite; }
+body[data-theme='dj'] .char-dhol { animation: charBob 0.6s ease-in-out infinite; }
+body[data-theme='dj'] .char-dhol .char-stick-l { animation: dholBeatFast 0.6s ease-in-out infinite; }
+body[data-theme='dj'] .char-dhol .char-stick-r { animation: dholBeatFast 0.6s ease-in-out 0.15s infinite; }
+body[data-theme='dj'] .char-chachi { animation: charBob 0.8s ease-in-out 0.1s infinite; }
+body[data-theme='dj'] .char-chachi .char-arm-l { animation: clapFast 0.8s ease-in-out infinite; }
+body[data-theme='dj'] .char-chachi .char-arm-r { animation: clapFast 0.8s ease-in-out 0.1s infinite; }
+body[data-theme='dj'] .char-uncle { animation: charJump 1s ease-in-out 0.15s infinite; }
+body[data-theme='dj'] .char-uncle .char-arm-l { animation: armPump 1s ease-in-out infinite; }
+body[data-theme='dj'] .char-uncle .char-arm-r { animation: armPump 1s ease-in-out 0.2s infinite; }
+body[data-theme='dj'] .char-photo { animation: charBob 1.2s ease-in-out 0.2s infinite; }
+body[data-theme='dj'] .char-photo .char-arm-r { animation: photoSnap 1.2s ease-in-out infinite; }
+
+/* Vidaai theme */
+body[data-theme='vidaai'] .char-baraati { animation: charSway 3.5s ease-in-out infinite; }
+body[data-theme='vidaai'] .char-baraati .char-arm-l { animation: armSwingSlow 3.5s ease-in-out infinite; }
+body[data-theme='vidaai'] .char-baraati .char-arm-r { animation: armSwingSlow 3.5s ease-in-out 0.5s infinite; }
+body[data-theme='vidaai'] .char-dancer { animation: charSway 4s ease-in-out 0.3s infinite; }
+body[data-theme='vidaai'] .char-dancer .char-arm-l { animation: armWaveSlow 4s ease-in-out infinite; }
+body[data-theme='vidaai'] .char-dancer .char-arm-r { animation: armWaveSlow 4s ease-in-out 0.6s infinite; }
+body[data-theme='vidaai'] .char-dhol { animation: charBob 3s ease-in-out 0.2s infinite; }
+body[data-theme='vidaai'] .char-dhol .char-stick-l { animation: dholBeatSlow 3s ease-in-out infinite; }
+body[data-theme='vidaai'] .char-dhol .char-stick-r { animation: dholBeatSlow 3s ease-in-out 0.5s infinite; }
+body[data-theme='vidaai'] .char-chachi { animation: charSway 3.8s ease-in-out 0.4s infinite; }
+body[data-theme='vidaai'] .char-chachi .char-arm-l { animation: clapSlow 3.8s ease-in-out infinite; }
+body[data-theme='vidaai'] .char-chachi .char-arm-r { animation: clapSlow 3.8s ease-in-out 0.2s infinite; }
+body[data-theme='vidaai'] .char-uncle { animation: charSway 4.2s ease-in-out infinite; }
+body[data-theme='vidaai'] .char-photo { animation: charBob 3.6s ease-in-out 0.6s infinite; }
+body[data-theme='vidaai'] .char-photo .char-arm-r { animation: photoAim 4s ease-in-out infinite; }
+
+/* Baraat strip dancer animations */
+.dancer { animation: bob 1.1s ease-in-out infinite; }
+.dancer svg { display: block; overflow: visible; }
+.dancer .arm-l { transform-origin: 20px 20px; animation: armSwingL 1.1s ease-in-out infinite; }
+.dancer .arm-r { transform-origin: 20px 20px; animation: armSwingR 1.1s ease-in-out infinite; }
+.dancer .leg-l { transform-origin: 20px 44px; animation: legKickL 1.1s ease-in-out infinite; }
+.dancer .leg-r { transform-origin: 20px 44px; animation: legKickR 1.1s ease-in-out infinite; }
+.dhol-player .arm-l, .dhol-player .arm-r { animation-duration: 0.55s; }
